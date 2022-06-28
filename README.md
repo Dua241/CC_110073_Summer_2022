@@ -18,6 +18,7 @@ Summer 2022 Compiler Construction / 110073
        <td><b>63650</b></td>
        <td><b>Dua Javeria</b></td>
   </tr>
+          </table>
    <h2> Introduction </h2>
           <h3> Duaa Javeria </h3>
           <div class="duaa">
@@ -25,4 +26,4 @@ Summer 2022 Compiler Construction / 110073
           </div>
 
             
-</table>
+
