@@ -14,26 +14,22 @@ Summer 2022 Compiler Construction / 110073
     <th>Student Id</th>
     <th>Student Name</th> 
   </tr>
-                <tr>
-                     <td>64083</td>
-       <td><b>Nimra Humayun(Group Leader)</b></td>
-               </tr>
   <tr>
+       
+       <td><b>64083</b></td>
+       <td><b>Nimra Humayun(Group Leader)</b></td>
+       </tr>
+   <tr>
        <td>63650</td>
        <td>Dua Javeria</td>
-   
-               </tr>
-                <tr>
+       </tr>
+<tr>
        <td>64074</td>
        <td>Ramsha Mansoor</td>
-               </tr>
-              
+  </tr>
           </table>
    <h2> Introduction </h2>
           <h3> Duaa Javeria </h3>
           <div class="duaa">
           <p> It's my pleasure to indtroduce myself. Currently, I am in summer Semester from PAF-KIET University with an aggregate of 3.25 CGPA. Now I am studying <b>Compiler Construction</b> Course from the great teacher <b>Sir Farooq Zaidi</b>.
           </div>
-
-            
-
