@@ -15,9 +15,8 @@ Summer 2022 Compiler Construction / 110073
     <th>Student Name</th> 
   </tr>
   <tr>
-       
-       <td><b>64083</b></td>
-       <td><b>Nimra Humayun</b></td>
+       <td>64083</td>
+       <td>Nimra Humayun</td>
        <td>63650</td>
        <td>Dua Javeria</td>
        <td>64074</td>
