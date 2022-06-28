@@ -18,10 +18,10 @@ Summer 2022 Compiler Construction / 110073
        
        <td><b>64083</b></td>
        <td><b>Nimra Humayun</b></td>
-       <td><b>63650</b></td>
-       <td><b>Dua Javeria</b></td>
-       <td><b>64074</b></td>
-       <td><b>Ramsha Mansoor</b></td>
+       <td>63650</td>
+       <td>Dua Javeria</td>
+       <td>64074</td>
+       <td>Ramsha Mansoor</td>
   </tr>
           </table>
    <h2> Introduction </h2>
