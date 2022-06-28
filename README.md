@@ -21,7 +21,7 @@ Summer 2022 Compiler Construction / 110073
        </tr>
                 <tr>
        <td>64083</td>
-       <td>Nimra Humayun</td>
+       <td>Nimra Humayun-Group Leader</td>
        </tr>
 <tr>
        <td>64074</td>
