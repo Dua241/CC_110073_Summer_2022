@@ -16,8 +16,13 @@ Summer 2022 Compiler Construction / 110073
   </tr>
   <tr>
        <td><b>63650</b></td>
-       <td><b>Dua Javeria(leader)</b></td>
+       <td><b>Dua Javeria</b></td>
   </tr>
+   <h2> Introduction </h2>
+          <h3> Duaa Javeria </h3>
+          <div class="duaa">
+          <p> It's my pleasure to indtroduce myself. Currently, I am in summer Semester from PAF-KIET University with an aggregate of 3.25 CGPA. Now I am studying <b>Compiler Construction</b> Course from the great teacher <b>Sir Farooq Zaidi</b>.
+          </div>
 
             
 </table>
