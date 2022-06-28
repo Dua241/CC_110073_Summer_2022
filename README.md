@@ -24,7 +24,7 @@ Summer 2022 Compiler Construction / 110073
    
                </tr>
                 <tr>
-                     <td>64074</td>
+       <td>64074</td>
        <td>Ramsha Mansoor</td>
                </tr>
               
