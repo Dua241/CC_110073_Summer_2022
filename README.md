@@ -5,6 +5,7 @@ StdID | Name
 64083 | Nimra Humayun-Group Leader
 63650 | Dua Javeria
 64074 | Ramsha Mansoor
+63191 | Riba Zainab Jaffri
 
 
 ### Introduction ###
@@ -20,3 +21,8 @@ It's my pleasure to indtroduce myself. Currently, I am in summer Semester from P
 ## Ramsha Mansoor ##
 
 I am student of PAF-KIET university. I am studing compiler construction from sir farooq zaidi. I have expertise in c# and JavaScript.
+
+## Riba Zainab Jaffri ##
+
+I am final year student in PAFKIET . I am studying CC . I am good at C# , html , css & java script.
+
