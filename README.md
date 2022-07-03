@@ -6,7 +6,7 @@ StdID | Name
 63650 | Dua Javeria
 64074 | Ramsha Mansoor
 63191 | Riba Zainab Jaffri
-
+61293 | M Zain Khan
 
 ### Introduction ###
 
@@ -24,5 +24,10 @@ I am student of PAF-KIET university. I am studing compiler construction from sir
 
 ## Riba Zainab Jaffri ##
 
-I am final year student in PAFKIET . I am studying CC . I am good at C# , html , css & java script.
+I am final year student in PAFKIET . I am studying CC . I am good at C# , html , css & java script . As well as frontend & backend development.
+
+## M Zain Khan ##
+
+I am student of PAFKIET university , i am studing cc from sir farooq zaidi . I am interserted in programming.
+
 
