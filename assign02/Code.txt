@@ -3,23 +3,18 @@
 % 
 { 
 
-  int i = 0; % 
+ #include<stdio.h>
+int flag = 0; 
 }
 % % 
 [a - z.0 - 9 _] + @[a - z] + ".com" | ".in"
-i = 1; 
+{flag=1; printf("\This is a Valid Email\n");} 
+.+ {printf("\nThis is an invalid Email\n");}
 %% 
-main() { 
+int main() { 
 
   yylex(); 
 
-  if (i == 1) 
-
-    printf("Email is according to ISO standards"); 
-
-  else
-
-    printf("Email is not according to ISO standards"); 
 }
 
 /*PHONE NUMBER CODE:*/
