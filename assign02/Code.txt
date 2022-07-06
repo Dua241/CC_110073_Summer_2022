@@ -3,13 +3,19 @@
 % 
 { 
 
- #include<stdio.h>
+#include<stdio.h>
 int flag = 0; 
 }
 % % 
 [a - z.0 - 9 _] + @[a - z] + ".com" | ".in"
-{flag=1; printf("\This is a Valid Email\n");} 
-.+ {printf("\nThis is an invalid Email\n");}
+{
+flag=1; 
+printf("\This is a Valid Email\n");
+} 
+.+ 
+{
+printf("\nThis is an invalid Email\n");
+}
 %% 
 int main() { 
 
@@ -27,7 +33,9 @@ int main() {
 %%
   
 [1-10][0-9]{10} {printf("\This is a Valid Phone Number\n");}
-.+ {printf("\nThis is an invalid Phone Number\n");}
+.+ {
+printf("\nThis is an invalid Phone Number\n");
+}
   
 %%
   
