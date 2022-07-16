@@ -6,7 +6,7 @@ Issue faced when creating the program for email was to identify the regex for is
 ### Problem Resolved ###
 By breaking email into parts and creating regex for them.
 
-# Report By RAMSHA MANSOOR #
+
 ### ISSUE ###
 There is a problem of % scope issue.
 
@@ -17,7 +17,7 @@ we will use double %% for start and  double %% for end because there is scope is
 
 
 
-# Report By Riba Zainab #
+
 ### Issue ###
 i faced issue that the data grid columns will need custom item renderers ranging .
 
