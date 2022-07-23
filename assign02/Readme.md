@@ -30,3 +30,12 @@ Data forms validation issue.
 ### Problem Resolved ###
 we can use reusable validators that is two date fields should be able to reuse the same instance or the Validator object.
 embedded validators, encapsulated in component such as DataGrid.
+
+### ISSUE ###
+i am not include the code yylex().
+### Problem Resolved ###
+they can be included and problem can solve the yylex() function produced by flex uses simulate finite state machine to recognize string or lexems then pases the this information to the parser in the form of integer tokens.
+
+
+
+
