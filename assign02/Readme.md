@@ -36,6 +36,10 @@ i am not include the code yylex().
 ### Problem Resolved ###
 they can be included and problem can solve the yylex() function produced by flex uses simulate finite state machine to recognize string or lexems then pases the this information to the parser in the form of integer tokens.
 
+### Video Link ###
+https://github.com/Dua241/CC_110073_Summer_2022/blob/main/assign02/Email%20video.mp4
+https://github.com/Dua241/CC_110073_Summer_2022/blob/main/assign02/Mobile%20Number%20video.mp4
+
 
 
 
