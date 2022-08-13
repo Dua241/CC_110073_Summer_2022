@@ -16,6 +16,8 @@ I have deployed two main concepts/phases in my project:
 I have also worked on Line structures, comments section of code, removing blank/white spaces, identifying identifiers, and intensifying literals and delimiters. I have also wrote and checked Grammar for python programs (e.g. methods/functions, class, statements, variables, literals, expressions, Ops etc.).
 
 ## sample language used ##
+ChocoPy is a restricted subset of Python 3, which can easily be compiled to a target. ChocoPy programs can be executed directly in a Python (3.6+) interpreter. ChocoPy programs can also be edited using standard Python syntax highlighting. ChocoPy uses Python 3.6 type annotations to enforce static type checking. The type system supports nominal subtyping. The language is fully specified using formal grammar, typing rules, and operational semantics.
+
 
 
 
