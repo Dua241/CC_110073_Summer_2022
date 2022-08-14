@@ -32,7 +32,5 @@ int main() {
 }
 ```
 
-## Flex Video ##
 
-https://user-images.githubusercontent.com/61600313/184500337-8350864d-5488-40fa-a0dc-ba7df4a5aba5.mp4
 
