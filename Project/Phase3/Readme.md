@@ -137,7 +137,7 @@ The type system supports nominal subtyping. The language is fully specified usin
 
 
 
-##Problems Faced##
+## Problems Faced ##
 
 Problem 2: Installation Flex:
 
