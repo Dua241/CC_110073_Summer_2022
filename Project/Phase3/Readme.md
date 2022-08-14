@@ -128,11 +128,11 @@ The file “test.l” I have written is in lex language which describes the lexi
 %%
 {Supplementary Code}
 
-# Definitions:
+## Definitions:
 This section includes declaration of variables, configurations and establishing operator precedence.
-# Rules:
+## Rules:
 The required production section where I specify grammar rules. :  It has the form => Pattern {Action}.
-# Supplementary Code:
+## Supplementary Code:
 Used for ordinary C code and functions.
 
 
