@@ -59,9 +59,10 @@ I have generated token using “lex”, let’s talk about lex first:
 3.The input for lex toll is lex language and the tool itself is the lex compiler.
 4.	The lex compiler transforms the input patterns into a transition diagram and generates code, in a file called inputfile.c.
 
-![ccproj](https://user-images.githubusercontent.com/74272047/184535961-46d5eab0-cbeb-4ab4-9d08-110531b84da4.png)
+![pic1](https://user-images.githubusercontent.com/61626142/184538300-5aaf3a6c-ae07-43c8-9ef7-eaf79fda6c52.PNG)
 
-The file “flexCode.l” I have written is in lex language which describes the lexical analyzer to be generated, all the tokens are described here. The “flexCode.l” file is again converted to C language (Command: lex flexCode.l), the file is always named “inputfile.c”. The “inputfile.c” is easily complied into a file “a.out” by the built-in C compiler in Ubuntu (Command: gcc inputfile.c). The “a.out” is a working lexical analyzer that takes a stream of input and produces a stream of tokens (Command: ./a.out).
+
+The file “flexCode.l” I have written is in lex language which describes the lexical analyzer to be generated, all the tokens are described here. The “flexCode.l” file is again converted to C language (Command: lex flexCode.l), the file is always named “sampleCode.c”. The “sampleCode.c” is easily complied into a file “a.out” by the built-in C compiler in Ubuntu (Command: gcc sampleCode.c). The “a.out” is a working lexical analyzer that takes a stream of input and produces a stream of tokens (Command: ./a.out).
 
 ### Structure of a Lex Program: ###
 {Declarations}
@@ -87,7 +88,7 @@ we have convert C language program to python program.
 •	It is a tool which generates LALR (Look Ahead LR) Parser.
 •	Syntax analyzer is the second phase of compiler which takes input as tokens and generates syntax tree.
 
-![ccproj1](https://user-images.githubusercontent.com/74272047/184536133-d2072c10-d62f-45ac-bd38-66c5cb90c5b7.png)
+![pic2](https://user-images.githubusercontent.com/61626142/184538408-543caaea-9981-43ef-9bba-75e1125c5da8.PNG)
 
 
 The file “test.l” I have written is in lex language which describes the lexical analyzer to be generated, all the tokens are described here. The “test.l” file is again converted to C language (Command: lex test.l), the file is always named “lex.yy.c”. Then the “test.y” (file containing grammar) is converted to “y.tab.c” file by YACC complier (Command: yacc –d –v test.l). The “lex.yy.c” and “y.tab.c” is easily complied into a file “a.out” by the built-in C compiler in Ubuntu (Command: gcc lex.yy.c y.tab.c -w). The “a.out” is a working lexical + syntax analyzer that takes a stream of input and tells us either the convert code is python  show .(Command: ./a.out).
@@ -129,6 +130,8 @@ When I created my lexical analyzer I had many issues in its compilation. My lex 
 •	https://chocopy.org/chocopy_implementation_guide.pdf
 
 # Video Link 
-
+### phase 2:
 https://user-images.githubusercontent.com/61600313/184534708-097669a5-154c-4d50-8d1e-a67b3b93faf9.mp4
+### phase 3:
+https://user-images.githubusercontent.com/61626142/184538532-543cc44c-a252-43f4-8d57-d1709955fab0.mp4
 
