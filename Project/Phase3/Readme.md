@@ -19,83 +19,52 @@ we have deployed two main concepts/phases in my project:
 we have also worked on Line structures, comments section of code, removing blank/white spaces, identifying identifiers, and intensifying literals and delimiters. we have also wrote and algorithm  for python programs (e.g. methods/functions, class, statements, variables, literals, expressions, Ops etc.).
 
 
-Sample Language Used:
+## Sample Language Used: ##
 
-ChocoPy is a restricted subset of Python 3, which can easily be compiled to a target. ChocoPy programs can be executed directly in a Python (3.6+) interpreter.
+We decided to Select C language for the purpose of generating tokens translates a program written in C programming language into python. But we used chocopy is a restricted subset of Python 3, which can easily be compiled to a target. ChocoPy programs can be executed directly in a Python (3.6+) interpreter.
 ChocoPy programs can also be edited using standard Python syntax highlighting. ChocoPy uses Python 3.6 type annotations to enforce static type checking.
 The type system supports nominal subtyping. The language is fully specified using formal grammar, typing rules, and operational semantics.
-
-
 ## Lexical Specification ##
-
- Line structure:
- 
- To accommodate this, ChocoPy defines three lexical tokens that are derived from whitespace: NEWLINE, INDENT, and DEDENT. The rules for when such tokens are generated  are described next using the concepts of physical and logical lines. Logical Line: NEWLINE (A physical line is a sequence of characters terminated by an end-of-line sequence) Physical Line: \r\n (A logical line is a physical line that contains at least one token that is not whitespace or comments. The end of a logical line is represented by the lexical token newline)
- 
- 
+ # Line structure:
+To accommodate this, ChocoPy defines three lexical tokens that are derived from whitespace: NEWLINE, INDENT, and DEDENT. The rules for when such tokens are generated  are described next using the concepts of physical and logical lines. Logical Line: NEWLINE (A physical line is a sequence of characters terminated by an end-of-line sequence) Physical Line: \r\n (A logical line is a physical line that contains at least one token that is not whitespace or comments. The end of a logical line is represented by the lexical token newline)
 # Comments:
- 
-  A comment starts with a hash character (#) that is not part of a string literal, and ends at the end of the physical line. Comments are   ignored by the lexical analyzer.
- 
- Whitespaces:
- 
-  The whitespace characters space and tab can be used to separate tokens. It is needed between two tokens only if their concatenation       could otherwise it will be deal as a different token. Whitespace characters are not tokens, they are simply ignored. E.g: ab is a token   but a b is considered as two tokens.
-  
- Identifiers:
- 
- Contiguous sequence of characters is called as identifiers. 
- Containing. [A-Za=z0-9]*
- 
-  Keywords:
-  
-  Keywords are not recognized as identifiers. Some Chocopy keywords are: False, None, True, and, break, class, continue, def, del, elif,   else, for, global, if, import, in, is, lambda, return, try, while etc.
-  
-  Literals:
-  
-  Integer literal in ChocoPy is made up of one or more digits like 0-9. There are non-zero valued integer literals and it is the left       most digit 0. If it is only character in the sequence. The integer value of these literals is interpreted in base 10. And its maximum     value can be 1-231 literal. Literal with larger value gives the lexical errors.
-  
-  Operators:
-  
-  Operators in Chocopy
- // % < > <= >= == != = ( ) [ ] ->
- 
- # Delimiters:
-  
-  A delimiter (also known as separator) is a sequence of one or more characters used to specify the boundary between separate,             independent regions in plain text or other data streams. e.g ,  ; : . etc.
-  
- # Lexical Tokens:
-  
-  The following tokens are used in ChocoPy language:
-  Identifier (Char) :> 0,1,2,3,5,6,7 .a, b, c, A, B, C, Z 
-  Line Structure (newline, Indent):> \n,\t,""," " 
-  Keyword: >False, True, and, as, class, await, break, continue, def, elif, else, for, global, if, import, in, lambda, not, or, return,     while
-  Operator :> +,-,",*,//,%,==,<=,>= 
-  Literals: (String or int) :"asdasd" 123123 
-  Delimiters: >. : ; , 
-  Predefine: > input, print,len 
-  Comments: >"#"
-  
- # Grammar:
-  
-  ![image](https://user-images.githubusercontent.com/77384566/184533657-5b5e9552-04f9-4ea9-b0f4-5d402ac27666.png)
-  
-  ![image](https://user-images.githubusercontent.com/77384566/184533677-5b96c4b4-2ffb-4c72-97e5-125c6086a66a.png)
-  
-  
- # Lexical Analyzer:
-  
-  I have generated token using “lex”, let’s talk about lex first:
-1 Lex is basically a tool, which generates lexical analyzer.
-2	Lexical analyzer is a first phase of compiler which takes “high-level source code” as input, and generates output as tokens.
-3	The input for lex toll is lex language and the tool itself is the lex compiler.
-4	The lex compiler transforms the input patterns into a transition diagram and generates code, in a file called inputfile.c.
+A comment starts with a hash character (#) that is not part of a string literal, and ends at the end of the physical line. Comments are   ignored by the lexical analyzer. 
+# Whitespaces:
+The whitespace characters space and tab can be used to separate tokens. It is needed between two tokens only if their concatenation       could otherwise it will be deal as a different token. Whitespace characters are not tokens, they are simply ignored. E.g: ab is a token   but a b is considered as two tokens. 
+# Identifiers:
+Contiguous sequence of characters is called as identifiers. 
+Containing. [A-Za=z0-9]*
+# Keywords:
+Keywords are not recognized as identifiers. Some Chocopy keywords are: False, None, True, and, break, class, continue, def, del, elif,   else, for, global, if, import, in, is, lambda, return, try, while etc.
+# Literals:
+Integer literal in ChocoPy is made up of one or more digits like 0-9. There are non-zero valued integer literals and it is the left       most digit 0. If it is only character in the sequence. The integer value of these literals is interpreted in base 10. And its maximum     value can be 1-231 literal. Literal with larger value gives the lexical errors.
+# Operators:
+Operators in Chocopy
+// % < > <= >= == != = ( ) [ ] ->
+# Delimiters:
+A delimiter (also known as separator) is a sequence of one or more characters used to specify the boundary between separate,             independent regions in plain text or other data streams. e.g ,  ; : . etc.
+## Lexical Tokens: ##
+The following tokens are used in ChocoPy language:
+Identifier (Char) :> 0,1,2,3,5,6,7 .a, b, c, A, B, C, Z 
+Line Structure (newline, Indent):> \n,\t,""," " 
+Keyword: >False, True, and, as, class, await, break, continue, def, elif, else, for, global, if, import, in, lambda, not, or, return,     while
+Operator :> +,-,",*,//,%,==,<=,>= 
+Literals: (String or int) :"asdasd" 123123 
+Delimiters: >. : ; , 
+Predefine: > input, print,len 
+Comments: >"#"
+## Lexical Analyzer: ##
+I have generated token using “lex”, let’s talk about lex first:
+1. Lex is basically a tool, which generates lexical analyzer.
+2.	Lexical analyzer is a first phase of compiler which takes “high-level source code” as input, and generates output as tokens.
+3.The input for lex toll is lex language and the tool itself is the lex compiler.
+4.	The lex compiler transforms the input patterns into a transition diagram and generates code, in a file called inputfile.c.
 
 ![ccproj](https://user-images.githubusercontent.com/74272047/184535961-46d5eab0-cbeb-4ab4-9d08-110531b84da4.png)
 
-
-
 The file “flexCode.l” I have written is in lex language which describes the lexical analyzer to be generated, all the tokens are described here. The “flexCode.l” file is again converted to C language (Command: lex flexCode.l), the file is always named “inputfile.c”. The “inputfile.c” is easily complied into a file “a.out” by the built-in C compiler in Ubuntu (Command: gcc inputfile.c). The “a.out” is a working lexical analyzer that takes a stream of input and produces a stream of tokens (Command: ./a.out).
-Structure of a Lex Program:
+
+## Structure of a Lex Program: ##
 {Declarations}
 %%
 {Translation Rules}
