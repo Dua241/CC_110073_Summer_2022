@@ -13,8 +13,8 @@ The platform used is Ubunto 20.04 LTS or any other UNIX platform which supports 
 
 
 ## Course Concepts ##
-I have deployed two main concepts/phases in my project:
-1. Lexical Analyzer: (In this particular phase, I have wrote some scripts to divide our Python (ChocoPy) code into useful Tokens.
-2. Syntax Analyzer: (In this particular phase, I have wrote an algorithm for checking syntax errors in our ChocoPy code).
-I have also worked on Line structures, comments section of code, removing blank/white spaces, identifying identifiers, and intensifying literals and delimiters. I have also wrote and checked Grammar for python programs (e.g. methods/functions, class, statements, variables, literals, expressions, Ops etc.).
+we have deployed two main concepts/phases in my project:
+1. Lexical Analyzer: (In this particular phase, we have wrote some scripts to divide our C Language code into useful Tokens.
+2. Syntax Analyzer: (In this particular phase, we have wrote an algorithm that translates a program written in C programming language into python..
+we have also worked on Line structures, comments section of code, removing blank/white spaces, identifying identifiers, and intensifying literals and delimiters. we have also wrote and algorithm  for python programs (e.g. methods/functions, class, statements, variables, literals, expressions, Ops etc.).
 
