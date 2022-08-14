@@ -103,3 +103,51 @@ The type system supports nominal subtyping. The language is fully specified usin
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+##Problems Faced##
+Problem 2: Installation Flex:
+
+When I created my lexical analyzer I had many issues in its compilation. My lex file wasn't created because of installation issues in line, so after trying so many times finally I have got succeed.
+
+Problem 3: Language selection problem and why we select this:
+
+we decide we work on python. ChocoPy fulfill all necessary requirement like grammar etc.
+
+
+##Video Link##
+
+https://user-images.githubusercontent.com/61600313/184534708-097669a5-154c-4d50-8d1e-a67b3b93faf9.mp4
+
