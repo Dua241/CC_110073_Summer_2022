@@ -63,6 +63,37 @@ The type system supports nominal subtyping. The language is fully specified usin
   
   A delimiter (also known as separator) is a sequence of one or more characters used to specify the boundary between separate,             independent regions in plain text or other data streams. e.g ,  ; : . etc.
   
+  Lexical Tokens:
+  
+  The following tokens are used in ChocoPy language:
+  Identifier (Char) :> 0,1,2,3,5,6,7 .a, b, c, A, B, C, Z 
+  Line Structure (newline, Indent):> \n,\t,""," " 
+  Keyword: >False, True, and, as, class, await, break, continue, def, elif, else, for, global, if, import, in, lambda, not, or, return,     while
+  Operator :> +,-,",*,//,%,==,<=,>= 
+  Literals: (String or int) :"asdasd" 123123 
+  Delimiters: >. : ; , 
+  Predefine: > input, print,len 
+  Comments: >"#"
+  
+  Grammar:
+  
+  ![image](https://user-images.githubusercontent.com/77384566/184533657-5b5e9552-04f9-4ea9-b0f4-5d402ac27666.png)
+  
+  ![image](https://user-images.githubusercontent.com/77384566/184533677-5b96c4b4-2ffb-4c72-97e5-125c6086a66a.png)
+  
+  
+  Lexical Analyzer:
+  
+  I have generated token using “lex”, let’s talk about lex first:
+1 Lex is basically a tool, which generates lexical analyzer.
+2	Lexical analyzer is a first phase of compiler which takes “high-level source code” as input, and generates output as tokens.
+3	The input for lex toll is lex language and the tool itself is the lex compiler.
+4	The lex compiler transforms the input patterns into a transition diagram and generates code, in a file called inputfile.c.
+
+
+
+
+  
   
 
 
