@@ -137,62 +137,6 @@ Used for ordinary C code and functions.
 
 
 
-References:
-•	https://chocopy.org/
-•	https://www.python.org/dev/peps/pep-0526/
-•	https://chocopy.org/chocopy_language_reference.pdf
-•	http://dinosaur.compilertools.net/flex/manpage.html
-•	https://chocopy.org/chocopy_implementation_guide.pdf
-
-
-
-
-
-
-  
-  
-
-
- 
- 
- 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 ## Problems Faced ##
 
 Problem 2: Installation Flex:
