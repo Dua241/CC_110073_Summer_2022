@@ -1,22 +1,22 @@
 # Project Report 
 
-# Introduction
+## Introduction
 This project is all about Chocopy language compiler. In this project I have used ChocoPy language. ChocoPy is a programming language designed for classroom use in undergraduate compilers courses. ChocoPy is a restricted subset of Python 3, which can easily be compiled to a target. The language is fully specified using formal grammar, typing rules, and operational semantics. I have built this project using LEX (lexical analyzer generator) and YACC (yet another compiler compiler). Lex and yacc are tools used to generate lexical analyzers and parsers.
-# Aim 
+## Aim 
 The main aim on this project is to learn and practically implements the concepts of Compiler Construction. 
 # Platform 
 The platform used is Ubunto 20.04 LTS or any other UNIX platform which supports C language along with lex and yacc.
-# Course Concepts 
+## Course Concepts 
 we have deployed two main concepts/phases in my project:
 1. Lexical Analyzer: (In this particular phase, we have wrote some scripts to divide our C Language code into useful Tokens.
 2. Syntax Analyzer: (In this particular phase, we have wrote an algorithm that translates a program written in C programming language into python..
 we have also worked on Line structures, comments section of code, removing blank/white spaces, identifying identifiers, and intensifying literals and delimiters. we have also wrote and algorithm  for python programs (e.g. methods/functions, class, statements, variables, literals, expressions, Ops etc.).
 
-# Sample Language Used
+## Sample Language Used
 We decided to Select C language for the purpose of generating tokens translates a program written in C programming language into python. But we used chocopy is a restricted subset of Python 3, which can easily be compiled to a target. ChocoPy programs can be executed directly in a Python (3.6+) interpreter.
 ChocoPy programs can also be edited using standard Python syntax highlighting. ChocoPy uses Python 3.6 type annotations to enforce static type checking.
 The type system supports nominal subtyping. The language is fully specified using formal grammar, typing rules, and operational semantics.
-# Lexical Specification: 
+## Lexical Specification: 
 ### Line structure:
 To accommodate this, ChocoPy defines three lexical tokens that are derived from whitespace: NEWLINE, INDENT, and DEDENT. The rules for when such tokens are generated  are described next using the concepts of physical and logical lines. Logical Line: NEWLINE (A physical line is a sequence of characters terminated by an end-of-line sequence) Physical Line: \r\n (A logical line is a physical line that contains at least one token that is not whitespace or comments. The end of a logical line is represented by the lexical token newline)
 ### Comments:
@@ -52,7 +52,7 @@ Delimiters: >. : ; ,
 Predefine: > input, print,len 
 
 Comments: >"#"
-# Lexical Analyzer
+## Lexical Analyzer
 I have generated token using “lex”, let’s talk about lex first:
 1. Lex is basically a tool, which generates lexical analyzer.
 2.	Lexical analyzer is a first phase of compiler which takes “high-level source code” as input, and generates output as tokens.
@@ -74,16 +74,16 @@ The file “flexCode.l” I have written is in lex language which describes the 
 %%
 
 {Auxiliary Functions}
-## Declarations:
+### Declarations:
 This section includes declaration of variables.
-## Translation Rules: 
+### Translation Rules: 
 It has the form => Pattern {Action}.
-## Auxiliary Functions:
+### Auxiliary Functions:
 The third section holds whatever auxiliary functions are used in the actions.
 
 # Syntax Analyzer:
 we have convert C language program to python program.
-### YACC: 
+## YACC: 
 •	Stands for yet another compiler compiler.
 •	It is a tool which generates LALR (Look Ahead LR) Parser.
 •	Syntax analyzer is the second phase of compiler which takes input as tokens and generates syntax tree.
@@ -104,11 +104,11 @@ The file “test.l” I have written is in lex language which describes the lexi
 
 {Supplementary Code}
 
-## Definitions:
+#### Definitions:
 This section includes declaration of variables, configurations and establishing operator precedence.
-## Rules:
+#### Rules:
 The required production section where I specify grammar rules. :  It has the form => Pattern {Action}.
-## Supplementary Code:
+#### Supplementary Code:
 Used for ordinary C code and functions.
 
 
