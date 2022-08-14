@@ -16,7 +16,7 @@ we have also worked on Line structures, comments section of code, removing blank
 We decided to Select C language for the purpose of generating tokens translates a program written in C programming language into python. But we used chocopy is a restricted subset of Python 3, which can easily be compiled to a target. ChocoPy programs can be executed directly in a Python (3.6+) interpreter.
 ChocoPy programs can also be edited using standard Python syntax highlighting. ChocoPy uses Python 3.6 type annotations to enforce static type checking.
 The type system supports nominal subtyping. The language is fully specified using formal grammar, typing rules, and operational semantics.
-## Lexical Specification: ##
+### Lexical Specification: ###
 ## Line structure:
 To accommodate this, ChocoPy defines three lexical tokens that are derived from whitespace: NEWLINE, INDENT, and DEDENT. The rules for when such tokens are generated  are described next using the concepts of physical and logical lines. Logical Line: NEWLINE (A physical line is a sequence of characters terminated by an end-of-line sequence) Physical Line: \r\n (A logical line is a physical line that contains at least one token that is not whitespace or comments. The end of a logical line is represented by the lexical token newline)
 ## Comments:
@@ -106,15 +106,16 @@ Used for ordinary C code and functions.
 
 
 ## Problems Faced ##
-
-Problem 2: Installation Flex:
-
+# Problem 1: Yacc program:
+When I merged our lex and yacc file means (.1 & .y extension file). I had so many errors in its compilations like (undefined reference of function in y file, redefinitions, declaration and so on). I had no idea about them because I never worked on such environment. It's my first time when I have designed parser so most of the errors were new to me so I have researched, took guide from videos and book and then finally after spending several hours on it I have resolved them.
+# Problem 2: Installation Flex:
 When I created my lexical analyzer I had many issues in its compilation. My lex file wasn't created because of installation issues in line, so after trying so many times finally I have got succeed.
-
-Problem 3: Language selection problem and why we select this:
-
-we decide we work on python. ChocoPy fulfill all necessary requirement like grammar etc.
-
+# References:
+•	https://chocopy.org/
+•	https://www.python.org/dev/peps/pep-0526/
+•	https://chocopy.org/chocopy_language_reference.pdf
+•	http://dinosaur.compilertools.net/flex/manpage.html
+•	https://chocopy.org/chocopy_implementation_guide.pdf
 
 ## Video Link ##
 
