@@ -138,6 +138,7 @@ The type system supports nominal subtyping. The language is fully specified usin
 
 
 ##Problems Faced##
+
 Problem 2: Installation Flex:
 
 When I created my lexical analyzer I had many issues in its compilation. My lex file wasn't created because of installation issues in line, so after trying so many times finally I have got succeed.
