@@ -16,26 +16,26 @@ we have also worked on Line structures, comments section of code, removing blank
 We decided to Select C language for the purpose of generating tokens translates a program written in C programming language into python. But we used chocopy is a restricted subset of Python 3, which can easily be compiled to a target. ChocoPy programs can be executed directly in a Python (3.6+) interpreter.
 ChocoPy programs can also be edited using standard Python syntax highlighting. ChocoPy uses Python 3.6 type annotations to enforce static type checking.
 The type system supports nominal subtyping. The language is fully specified using formal grammar, typing rules, and operational semantics.
-### Lexical Specification: ###
-## Line structure:
+# Lexical Specification: 
+### Line structure:
 To accommodate this, ChocoPy defines three lexical tokens that are derived from whitespace: NEWLINE, INDENT, and DEDENT. The rules for when such tokens are generated  are described next using the concepts of physical and logical lines. Logical Line: NEWLINE (A physical line is a sequence of characters terminated by an end-of-line sequence) Physical Line: \r\n (A logical line is a physical line that contains at least one token that is not whitespace or comments. The end of a logical line is represented by the lexical token newline)
-## Comments:
+### Comments:
 A comment starts with a hash character (#) that is not part of a string literal, and ends at the end of the physical line. Comments are   ignored by the lexical analyzer. 
-## Whitespaces:
+### Whitespaces:
 The whitespace characters space and tab can be used to separate tokens. It is needed between two tokens only if their concatenation       could otherwise it will be deal as a different token. Whitespace characters are not tokens, they are simply ignored. E.g: ab is a token   but a b is considered as two tokens. 
-## Identifiers:
+### Identifiers:
 Contiguous sequence of characters is called as identifiers. 
 Containing. [A-Za=z0-9]*
-## Keywords:
+### Keywords:
 Keywords are not recognized as identifiers. Some Chocopy keywords are: False, None, True, and, break, class, continue, def, del, elif,   else, for, global, if, import, in, is, lambda, return, try, while etc.
-## Literals:
+### Literals:
 Integer literal in ChocoPy is made up of one or more digits like 0-9. There are non-zero valued integer literals and it is the left       most digit 0. If it is only character in the sequence. The integer value of these literals is interpreted in base 10. And its maximum     value can be 1-231 literal. Literal with larger value gives the lexical errors.
-## Operators:
+### Operators:
 Operators in Chocopy
 // % < > <= >= == != = ( ) [ ] ->
-## Delimiters:
+### Delimiters:
 A delimiter (also known as separator) is a sequence of one or more characters used to specify the boundary between separate,             independent regions in plain text or other data streams. e.g ,  ; : . etc.
-## Lexical Tokens: ##
+### Lexical Tokens: ##
 The following tokens are used in ChocoPy language:
 Identifier (Char) :> 0,1,2,3,5,6,7 .a, b, c, A, B, C, Z 
 
@@ -65,11 +65,14 @@ The file “flexCode.l” I have written is in lex language which describes the 
 
 ## Structure of a Lex Program: ##
 {Declarations}
-%%
-{Translation Rules}
-%%
-{Auxiliary Functions}
 
+%%
+
+{Translation Rules}
+
+%%
+
+{Auxiliary Functions}
 ## Declarations:
 This section includes declaration of variables.
 ## Translation Rules: 
@@ -91,9 +94,13 @@ The file “test.l” I have written is in lex language which describes the lexi
 
 ## Structure of a YACC Program: ## 
 {Definitions}
+
 %%
+
 {Rules}
+
 %%
+
 {Supplementary Code}
 
 ## Definitions:
@@ -112,9 +119,13 @@ When I merged our lex and yacc file means (.1 & .y extension file). I had so man
 When I created my lexical analyzer I had many issues in its compilation. My lex file wasn't created because of installation issues in line, so after trying so many times finally I have got succeed.
 # References:
 •	https://chocopy.org/
+
 •	https://www.python.org/dev/peps/pep-0526/
+
 •	https://chocopy.org/chocopy_language_reference.pdf
+
 •	http://dinosaur.compilertools.net/flex/manpage.html
+
 •	https://chocopy.org/chocopy_implementation_guide.pdf
 
 ## Video Link ##
