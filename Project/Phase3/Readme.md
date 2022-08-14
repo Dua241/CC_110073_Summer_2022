@@ -24,8 +24,10 @@ we have also worked on Line structures, comments section of code, removing blank
 We decided to Select C language for the purpose of generating tokens translates a program written in C programming language into python. But we used chocopy is a restricted subset of Python 3, which can easily be compiled to a target. ChocoPy programs can be executed directly in a Python (3.6+) interpreter.
 ChocoPy programs can also be edited using standard Python syntax highlighting. ChocoPy uses Python 3.6 type annotations to enforce static type checking.
 The type system supports nominal subtyping. The language is fully specified using formal grammar, typing rules, and operational semantics.
-## Lexical Specification ##
- # Line structure:
+
+## Lexical Specification: ##
+
+# Line structure:
 To accommodate this, ChocoPy defines three lexical tokens that are derived from whitespace: NEWLINE, INDENT, and DEDENT. The rules for when such tokens are generated  are described next using the concepts of physical and logical lines. Logical Line: NEWLINE (A physical line is a sequence of characters terminated by an end-of-line sequence) Physical Line: \r\n (A logical line is a physical line that contains at least one token that is not whitespace or comments. The end of a logical line is represented by the lexical token newline)
 # Comments:
 A comment starts with a hash character (#) that is not part of a string literal, and ends at the end of the physical line. Comments are   ignored by the lexical analyzer. 
