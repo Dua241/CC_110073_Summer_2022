@@ -134,15 +134,6 @@ This section includes declaration of variables, configurations and establishing 
 The required production section where I specify grammar rules. :  It has the form => Pattern {Action}.
 # Supplementary Code:
 Used for ordinary C code and functions.
-## Problems Faced:
-# Problem 1: Yacc program:
-When I merged our lex and yacc file means (.1 & .y extension file). I had so many errors in its compilations like (undefined reference of function in y file, redefinitions, declaration and so on). I had no idea about them because I never worked on such environment. It's my first time when I have designed parser so most of the errors were new to me so I have researched, took guide from videos and book and then finally after spending several hours on it I have resolved them.
-
-# Problem 2: Installation Flex:
-When I created my lexical analyzer I had many issues in its compilation. My lex file wasn't created because of installation issues in line, so after trying so many times finally I have got succeed.
-
-# Problem 3: Language selection problem and why we select this:
- we decide we work on python. ChocoPy fulfill all necessary requirement like grammar etc.
 
 
 
