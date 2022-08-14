@@ -33,7 +33,7 @@ The type system supports nominal subtyping. The language is fully specified usin
  To accommodate this, ChocoPy defines three lexical tokens that are derived from whitespace: NEWLINE, INDENT, and DEDENT. The rules for when such tokens are generated  are described next using the concepts of physical and logical lines. Logical Line: NEWLINE (A physical line is a sequence of characters terminated by an end-of-line sequence) Physical Line: \r\n (A logical line is a physical line that contains at least one token that is not whitespace or comments. The end of a logical line is represented by the lexical token newline)
  
  
- Comments:
+# Comments:
  
   A comment starts with a hash character (#) that is not part of a string literal, and ends at the end of the physical line. Comments are   ignored by the lexical analyzer.
  
@@ -59,11 +59,11 @@ The type system supports nominal subtyping. The language is fully specified usin
   Operators in Chocopy
  // % < > <= >= == != = ( ) [ ] ->
  
-  Delimiters:
+ # Delimiters:
   
   A delimiter (also known as separator) is a sequence of one or more characters used to specify the boundary between separate,             independent regions in plain text or other data streams. e.g ,  ; : . etc.
   
-  Lexical Tokens:
+ # Lexical Tokens:
   
   The following tokens are used in ChocoPy language:
   Identifier (Char) :> 0,1,2,3,5,6,7 .a, b, c, A, B, C, Z 
@@ -75,20 +75,85 @@ The type system supports nominal subtyping. The language is fully specified usin
   Predefine: > input, print,len 
   Comments: >"#"
   
-  Grammar:
+ # Grammar:
   
   ![image](https://user-images.githubusercontent.com/77384566/184533657-5b5e9552-04f9-4ea9-b0f4-5d402ac27666.png)
   
   ![image](https://user-images.githubusercontent.com/77384566/184533677-5b96c4b4-2ffb-4c72-97e5-125c6086a66a.png)
   
   
-  Lexical Analyzer:
+ # Lexical Analyzer:
   
   I have generated token using “lex”, let’s talk about lex first:
 1 Lex is basically a tool, which generates lexical analyzer.
 2	Lexical analyzer is a first phase of compiler which takes “high-level source code” as input, and generates output as tokens.
 3	The input for lex toll is lex language and the tool itself is the lex compiler.
 4	The lex compiler transforms the input patterns into a transition diagram and generates code, in a file called inputfile.c.
+
+![ccproj](https://user-images.githubusercontent.com/74272047/184535961-46d5eab0-cbeb-4ab4-9d08-110531b84da4.png)
+
+
+
+The file “flexCode.l” I have written is in lex language which describes the lexical analyzer to be generated, all the tokens are described here. The “flexCode.l” file is again converted to C language (Command: lex flexCode.l), the file is always named “inputfile.c”. The “inputfile.c” is easily complied into a file “a.out” by the built-in C compiler in Ubuntu (Command: gcc inputfile.c). The “a.out” is a working lexical analyzer that takes a stream of input and produces a stream of tokens (Command: ./a.out).
+Structure of a Lex Program:
+{Declarations}
+%%
+{Translation Rules}
+%%
+{Auxiliary Functions}
+
+## Declarations:
+This section includes declaration of variables.
+## Translation Rules: 
+It has the form => Pattern {Action}.
+## Auxiliary Functions:
+The third section holds whatever auxiliary functions are used in the actions.
+
+### Syntax Analyzer:
+we have convert C language program to python program.
+## YACC: 
+•	Stands for yet another compiler compiler.
+•	It is a tool which generates LALR (Look Ahead LR) Parser.
+•	Syntax analyzer is the second phase of compiler which takes input as tokens and generates syntax tree.
+
+![ccproj1](https://user-images.githubusercontent.com/74272047/184536133-d2072c10-d62f-45ac-bd38-66c5cb90c5b7.png)
+
+
+The file “test.l” I have written is in lex language which describes the lexical analyzer to be generated, all the tokens are described here. The “test.l” file is again converted to C language (Command: lex test.l), the file is always named “lex.yy.c”. Then the “test.y” (file containing grammar) is converted to “y.tab.c” file by YACC complier (Command: yacc –d –v test.l). The “lex.yy.c” and “y.tab.c” is easily complied into a file “a.out” by the built-in C compiler in Ubuntu (Command: gcc lex.yy.c y.tab.c -w). The “a.out” is a working lexical + syntax analyzer that takes a stream of input and tells us either the convert code is python  show .(Command: ./a.out).
+
+## Structure of a YACC Program: ## 
+{Definitions}
+%%
+{Rules}
+%%
+{Supplementary Code}
+
+# Definitions:
+This section includes declaration of variables, configurations and establishing operator precedence.
+# Rules:
+The required production section where I specify grammar rules. :  It has the form => Pattern {Action}.
+# Supplementary Code:
+Used for ordinary C code and functions.
+## Problems Faced:
+# Problem 1: Yacc program:
+When I merged our lex and yacc file means (.1 & .y extension file). I had so many errors in its compilations like (undefined reference of function in y file, redefinitions, declaration and so on). I had no idea about them because I never worked on such environment. It's my first time when I have designed parser so most of the errors were new to me so I have researched, took guide from videos and book and then finally after spending several hours on it I have resolved them.
+
+# Problem 2: Installation Flex:
+When I created my lexical analyzer I had many issues in its compilation. My lex file wasn't created because of installation issues in line, so after trying so many times finally I have got succeed.
+
+# Problem 3: Language selection problem and why we select this:
+ we decide we work on python. ChocoPy fulfill all necessary requirement like grammar etc.
+
+
+
+References:
+•	https://chocopy.org/
+•	https://www.python.org/dev/peps/pep-0526/
+•	https://chocopy.org/chocopy_language_reference.pdf
+•	http://dinosaur.compilertools.net/flex/manpage.html
+•	https://chocopy.org/chocopy_implementation_guide.pdf
+
+
 
 
 
