@@ -1,133 +1,133 @@
 %{
 
-int comment=1; // if this is 0 means that everything is cooment till it is set to 1.  
-int EOF=0; // denotes the End of file
-int tokenizer(char*,char*);
+int comm=1; 
+int exhit=0;
+int Print_token(char*,char*);
 
 %}
 %%
 
 
 
-\/\* comment=0; // re for comment start
-\*\/ comment=1; // re for comment end
-\/\/  {if(comment) comment=2;} // if comment has double slash again set comment = 2
-[\n] {if(comment==2) comment=1;} // if comment is next line
+\/\* comm=0; 
+\*\/ comm=1;
+\/\/  {if(comm) comm=2;}
+[\n] {if(comm==2) comm=1;}
 
 
 
 [ \t\n]          ;
 [0-9]+\.[0-9]+   { 
-		    	if(comment%2) tokenizer("Float",yytext); // call token nizer if float re is ture same for all next lines
+		    	if(comm%2) Print_token("Float",yytext);
 		 }
 
-[0-9]+           { // re for integer
-			if(comment%2) tokenizer("Integer",yytext);
+[0-9]+           {
+			if(comm%2) Print_token("Integer",yytext);
 		 }
 
-if               { // re for if
-			if(comment%2) tokenizer("keyword",yytext);
+if               {
+			if(comm%2) Print_token("keyword",yytext);
 		 }
 
-else             { // re for else
-			if(comment%2) tokenizer("Keyword",yytext);
+else             {
+			if(comm%2) Print_token("Keyword",yytext);
 		 }
 
-for              { // re for for
-			if(comment%2) tokenizer("Keyword",yytext);
+for              {
+			if(comm%2) Print_token("Keyword",yytext);
 		 }
 
-int              { // re for int
-			if(comment%2) tokenizer("Keyword",yytext);
+int              {
+			if(comm%2) Print_token("Keyword",yytext);
 		 }
 
-float            { // re for float
-			if(comment%2) tokenizer("Keyword",yytext);
+float            {
+			if(comm%2) Print_token("Keyword",yytext);
 		 }
 
-while            { // re for while
-			if(comment%2) tokenizer("Keyword",yytext);
+while            {
+			if(comm%2) Print_token("Keyword",yytext);
 		 }
 
-"=="             { // re for ==
-			if(comment%2) tokenizer("Comparison",yytext);
+"=="             {
+			if(comm%2) Print_token("Comparison",yytext);
 		 }
 
-"<="             { // re for <=
-			if(comment%2) tokenizer("Comparison",yytext);
+"<="             {
+			if(comm%2) Print_token("Comparison",yytext);
 		 }
 
-">="             { // re for >=
-			if(comment%2) tokenizer("Comparison",yytext);
+">="             {
+			if(comm%2) Print_token("Comparison",yytext);
 		 }
 
-"<"              { // re for <
-			if(comment%2) tokenizer("Comparison",yytext);
+"<"              {
+			if(comm%2) Print_token("Comparison",yytext);
 		 }
 
-">"              { // re for >
-			if(comment%2) tokenizer("Comparison",yytext);
+">"              {
+			if(comm%2) Print_token("Comparison",yytext);
 		 }
 
-"="              { // re for =
-			if(comment%2) tokenizer("Assignment",yytext);
+"="              {
+			if(comm%2) Print_token("Assignment",yytext);
 		 }
 
-[+]              { // re for +
-			if(comment%2) tokenizer("Operator",yytext);
+[+]              {
+			if(comm%2) Print_token("Operator",yytext);
 		 }
 
-[-]              { // re for -
-			if(comment%2) tokenizer("Operator",yytext);
+[-]              {
+			if(comm%2) Print_token("Operator",yytext);
 		 }
 
-[*]              { // re for *
-			if(comment%2) tokenizer("Operator",yytext);
+[*]              {
+			if(comm%2) Print_token("Operator",yytext);
 		 }
 
-[/]              { // re for /
-			if(comment%2) tokenizer("Operator",yytext);
+[/]              {
+			if(comm%2) Print_token("Operator",yytext);
 		 }
 
-[{]              { // re for {
-			if(comment%2) tokenizer("Open-bracket",yytext);
+[{]              {
+			if(comm%2) Print_token("Open-bracket",yytext);
 		 }
 
-[}]              { // re for {
-			if(comment%2) tokenizer("Close-bracket",yytext);
+[}]              {
+			if(comm%2) Print_token("Close-bracket",yytext);
 		 }
 
-[(]              { // re for (
-			if(comment%2) tokenizer("Open-paren",yytext);
+[(]              {
+			if(comm%2) Print_token("Open-paren",yytext);
 		 }
 
-[)]              { // re for )
-			if(comment%2) tokenizer("Close-paren",yytext);
+[)]              {
+			if(comm%2) Print_token("Close-paren",yytext);
 		 }
 
-[;]              { // re for ;
-			if(comment%2) tokenizer("Semicolon",yytext);
+[;]              {
+			if(comm%2) Print_token("Semicolon",yytext);
 		 }
 
-[_a-zA-Z0-9]+    { // re for identifier
-			if(comment%2) tokenizer("Identifier",yytext);
+[_a-zA-Z0-9]+    {
+			if(comm%2) Print_token("Identifier",yytext);
 
 		 }
 
-.                { // end of file
-		   if(comment%2) EOF=1;
+.                {
+		   if(comm%2) exhit=1;
 		 }
 
 
 %%
 
 
-int tokenizer(char* type, char*text) // this writes in output file
+int Print_token(char* type, char*text)
 {
-	FILE *outfile = fopen("flex_output.txt" , "a"); // append in output file
-	fprintf(outfile , "Token Class: %s", type); // writes token class
-	fprintf(outfile , "Token: %s\n" , text); // writes token
-	fclose(outfile); // closes file
+	FILE *outfile = fopen("flex_output.txt" , "a");
+	fprintf(outfile , "%s\n",type);
+	fprintf(outfile , "%s\n" , text);
+	fclose(outfile);
 }
 
 
@@ -135,10 +135,10 @@ int tokenizer(char* type, char*text) // this writes in output file
 
 int main(int argc , char *argv[]) {	
 	FILE *myfile = fopen(argv[1], "r");
-	FILE *outfile = fopen("output.txt" , "w");
+	FILE *outfile = fopen("flex_output.txt" , "w");
 	// make sure it's valid:
 	if (!myfile) {
-		printf("Invalid Input File\n");
+		printf("Input file not found\n");
 		return -1;
 	}
 	// set lex to read from it instead of defaulting to STDIN:
@@ -146,12 +146,10 @@ int main(int argc , char *argv[]) {
 	
 	// lex through the input:
 	yylex();
-	if(EOF>0)
+	if(exhit>0)
 		fprintf(stdout,"Syntax error\n");
 	else
 		fprintf(stdout,"Success\n");
 	fclose(myfile);
 	fclose(outfile);
-}
-}
 }
