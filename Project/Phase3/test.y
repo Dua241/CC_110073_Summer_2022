@@ -14,8 +14,6 @@
 %token OPERATORS DELIMITERS LITERAL
 %token PRINT KEYWORD LINE
 
-
-
 %%
 
 /* Parser Grammar */
@@ -25,7 +23,6 @@ start: stmt DELIMITERS{
             YYACCEPT; 
         };
         
-
 stmt:  display | method | loop | KEYWORD| if | ID ;
 
 
@@ -44,6 +41,5 @@ opid: OPERATORS ID | ID OPERATORS;
 op: OPERATORS OPERATORS;
 
 if: KEYWORD ID opnum NUMBER
-
 
 %%
