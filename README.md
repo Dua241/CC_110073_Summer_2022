@@ -32,3 +32,4 @@ I am instresting in programming and entrepreneurship
 I have expertise in c#.
 
 
+if(lessOrEquals(length(outputs('Compose')),5),outputs('Compose'),substring(outputs('Compose'),sub(length(outputs('Compose')),5)))
